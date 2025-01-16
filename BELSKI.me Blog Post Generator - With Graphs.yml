@@ -1,0 +1,1561 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: BELSKI.me Blog Post Generator - With Graphs
+  use_icon_as_answer_icon: false
+kind: app
+version: 0.1.5
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: 1719836429476-source-1719836486187-target
+      selected: false
+      source: '1719836429476'
+      sourceHandle: source
+      target: '1719836486187'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 1719836683426-source-1719837155330-target
+      selected: false
+      source: '1719836683426'
+      sourceHandle: source
+      target: '1719837155330'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 1719837155330-source-1719837604056-target
+      selected: false
+      source: '1719837155330'
+      sourceHandle: source
+      target: '1719837604056'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: 1719837604056-source-1719837976680-target
+      selected: false
+      source: '1719837604056'
+      sourceHandle: source
+      target: '1719837976680'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: 1719837976680-source-1719837933588-target
+      selected: false
+      source: '1719837976680'
+      sourceHandle: source
+      target: '1719837933588'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: end
+      id: 1719848037971-source-1719836476583-target
+      selected: false
+      source: '1719848037971'
+      sourceHandle: source
+      target: '1719836476583'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: template-transform
+      id: 1719839156682-source-1719848037971-target
+      selected: false
+      source: '1719839156682'
+      sourceHandle: source
+      target: '1719848037971'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '1719837709331'
+        sourceType: iteration-start
+        targetType: llm
+      id: 1719837709331start0-source-1719837715461-target
+      selected: false
+      source: 1719837709331start0
+      sourceHandle: source
+      target: '1719837715461'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: template-transform
+      id: 1726729891814-source-1719848037971-target
+      selected: false
+      source: '1726729891814'
+      sourceHandle: source
+      target: '1719848037971'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: template-transform
+      id: 1726730481614-source-1719848037971-target
+      selected: false
+      source: '1726730481614'
+      sourceHandle: source
+      target: '1719848037971'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: template-transform
+      id: 1726730684531-source-1719848037971-target
+      selected: false
+      source: '1726730684531'
+      sourceHandle: source
+      target: '1719848037971'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: template-transform
+        targetType: code
+      id: 1719848037971-source-1729690945627-target
+      source: '1719848037971'
+      sourceHandle: source
+      target: '1729690945627'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: 1729690945627-source-1726729633925-target
+      source: '1729690945627'
+      sourceHandle: source
+      target: '1726729633925'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: if-else
+      id: 1719837933588-source-1733221729024-target
+      source: '1719837933588'
+      sourceHandle: source
+      target: '1733221729024'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: iteration
+      id: 1733221729024-true-1719837709331-target
+      source: '1733221729024'
+      sourceHandle: 'true'
+      target: '1719837709331'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: iteration
+      id: 1733221729024-5e978fad-a022-4c0b-8b3e-0035a5a34968-17332217537940-target
+      source: '1733221729024'
+      sourceHandle: 5e978fad-a022-4c0b-8b3e-0035a5a34968
+      target: '17332217537940'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: if-else
+        targetType: iteration
+      id: 1733221729024-9c45b8bc-7f35-43e3-9017-d6612b1d3bb7-17332217775950-target
+      source: '1733221729024'
+      sourceHandle: 9c45b8bc-7f35-43e3-9017-d6612b1d3bb7
+      target: '17332217775950'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: '17332217537940'
+        sourceType: iteration-start
+        targetType: llm
+      id: 1733221753794start-source-1733221753794017332217537940-target
+      source: 1733221753794start
+      sourceHandle: source
+      target: '1733221753794017332217537940'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: '17332217775950'
+        sourceType: iteration-start
+        targetType: llm
+      id: 1733221777595start-source-1733221777595017332217775950-target
+      source: 1733221777595start
+      sourceHandle: source
+      target: '1733221777595017332217775950'
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: false
+        sourceType: iteration
+        targetType: variable-aggregator
+      id: 1719837709331-source-1733222418803-target
+      source: '1719837709331'
+      sourceHandle: source
+      target: '1733222418803'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: code
+      id: 1733222418803-source-1726730684531-target
+      source: '1733222418803'
+      sourceHandle: source
+      target: '1726730684531'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: iteration
+        targetType: variable-aggregator
+      id: 17332217537940-source-1733222418803-target
+      source: '17332217537940'
+      sourceHandle: source
+      target: '1733222418803'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: iteration
+        targetType: variable-aggregator
+      id: 17332217775950-source-1733222418803-target
+      source: '17332217775950'
+      sourceHandle: source
+      target: '1733222418803'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: code
+      id: 1733222418803-source-1719839156682-target
+      source: '1733222418803'
+      sourceHandle: source
+      target: '1719839156682'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: llm
+      id: 1733222418803-source-1726729891814-target
+      source: '1733222418803'
+      sourceHandle: source
+      target: '1726729891814'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: variable-aggregator
+        targetType: http-request
+      id: 1733222418803-source-1726730481614-target
+      source: '1733222418803'
+      sourceHandle: source
+      target: '1726730481614'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: variable-aggregator
+      id: 1719836486187-source-1719836683426-target
+      source: '1719836486187'
+      sourceHandle: source
+      target: '1719836683426'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: Start
+        type: start
+        variables:
+        - label: title
+          max_length: 100
+          options: []
+          required: true
+          type: text-input
+          variable: title
+        - label: outline
+          max_length: 6500
+          options: []
+          required: true
+          type: paragraph
+          variable: outline
+        - label: audience
+          max_length: 48
+          options: []
+          required: true
+          type: text-input
+          variable: audience
+        - label: make diagrams
+          max_length: 48
+          options:
+          - 'yes'
+          - 'no'
+          required: true
+          type: select
+          variable: make_diagrams
+        - label: make code samples
+          max_length: 48
+          options:
+          - 'yes'
+          - 'no'
+          required: true
+          type: select
+          variable: make_codesample
+      height: 194
+      id: '1719836429476'
+      position:
+        x: 128.4348742299585
+        y: 350
+      positionAbsolute:
+        x: 128.4348742299585
+        y: 350
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - '1719839156682'
+          - result
+          variable: result
+        selected: false
+        title: Answer
+        type: end
+      height: 90
+      id: '1719836476583'
+      position:
+        x: 4111
+        y: 780.5
+      positionAbsolute:
+        x: 4111
+        y: 780.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: Get keywords
+        model:
+          completion_params:
+            frequency_penalty: 0.1
+            presence_penalty: 0.1
+            temperature: 0.8
+            top_p: 0.9
+          mode: chat
+          name: claude-3-5-sonnet-20240620
+          provider: anthropic
+        prompt_template:
+        - edition_type: basic
+          id: d663eecc-4225-4e32-8422-ad3e90c6c161
+          role: system
+          text: 'Return just the phrase, do not include any special symbols such as
+            quotation mark and colons. '
+        - id: 25944815-d562-4b74-8223-07d3fc32c69e
+          role: user
+          text: I am researching for an article titled "{{#1719836429476.title#}}",
+            what associated, high traffic phrase would i type into Google to find
+            this article?
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: LLM - google keywords and phrase
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: false
+      height: 151
+      id: '1719836486187'
+      position:
+        x: 535.4348440763791
+        y: 350
+      positionAbsolute:
+        x: 535.4348440763791
+        y: 350
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        output_type: string
+        selected: false
+        title: Variable Aggregator
+        type: variable-aggregator
+        variables:
+        - - '1719836486187'
+          - text
+      height: 109
+      id: '1719836683426'
+      position:
+        x: 938
+        y: 350
+      positionAbsolute:
+        x: 938
+        y: 350
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-sonnet-20240229
+          provider: anthropic
+        prompt_template:
+        - edition_type: basic
+          id: ffe7853e-a702-402c-993b-2d30b694ef6d
+          role: system
+          text: "I want a Google search phrase that will get me authoritative information\
+            \ for my article titled \n{{#1719836486187.text#}}, aimed at {{#1719836429476.audience#}}.\
+            \ Please return a search phrase that would give me good general overview\
+            \ of this topic five words or less. Include any words your are not familiar\
+            \ with in the search query. Return just the phrase, do not include any\
+            \ special symbols such as quotation mark and colons. "
+        - id: 2e4cceb9-cd27-497c-979d-7fe3f4c65bb2
+          role: user
+          text: '{{#1719836429476.title#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: LLM - Search Phrases
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: false
+      height: 123
+      id: '1719837155330'
+      position:
+        x: 1242
+        y: 350
+      positionAbsolute:
+        x: 1242
+        y: 350
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: 'Write Intro
+
+          '
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-sonnet-20240229
+          provider: anthropic
+        prompt_template:
+        - edition_type: basic
+          id: ef00d256-fc1a-4125-886b-547ff9f82003
+          role: system
+          text: 'You are an SEO expert who writes in an straightforward, practical,
+            educational tone that is matter-of-fact instead of a storytelling or narrative
+            style, focused on informing the "how to", "what is", and "why" rather
+            than narrating to the audience {{#1719836429476.audience#}}. Write at
+            a 6th grade reading level.
+
+
+            Use the following tone and voice: "engaging"
+
+            Use active, present tense, and avoid complex language and syntax such
+            as "unravel", "delve", etc. without narration. Now, excluding the title,
+            introduce the blog in 3-5 sentences. Then, use an h2 header to write the
+            the section title which should only contain title generated for outline
+            and provide a concise, SEO-optimized title. Do not include h3 sub headers.
+            Feel free to use bullets, numbered lists, or paragraphs, or bold text
+            for emphasis when you see fit. Output should contains introduction to
+            the article outline as a summary, never include outline itself, neither
+            include any sections or subsections from outline.
+
+
+            <Article Outline>
+
+            {{#1719837155330.text#}}
+
+            <Introduction>'
+        - id: bdb837c5-c9da-4986-90ac-0c49aa51b8dd
+          role: user
+          text: You should format output as markdown, should contains introduction
+            to the article outline as a summary, never include outline itself and
+            titles from outline from h1, h2 and h3 titles.Do not add "Here is intro"
+            but just return relevant text.
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: LLM - Intro
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: false
+      height: 151
+      id: '1719837604056'
+      position:
+        x: 1546
+        y: 350
+      positionAbsolute:
+        x: 1546
+        y: 350
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 225.84154352699113
+        is_parallel: false
+        iterator_selector:
+        - '1719837933588'
+        - result
+        output_selector:
+        - '1719837715461'
+        - text
+        output_type: array[string]
+        parallel_nums: 10
+        selected: false
+        startNodeType: llm
+        start_node_id: 1719837709331start0
+        title: Iteration - Write Body
+        type: iteration
+        width: 377
+      height: 226
+      id: '1719837709331'
+      position:
+        x: 2762
+        y: 350
+      positionAbsolute:
+        x: 2762
+        y: 350
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 377
+      zIndex: 1
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        isIterationStart: true
+        iteration_id: '1719837709331'
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-sonnet-20240229
+          provider: anthropic
+        prompt_template:
+        - edition_type: basic
+          id: 2344db64-3bb3-4fb8-ae50-5ac537a3dfc2
+          role: system
+          text: "You are an expert document writer. Your job is to write long form\
+            \ cohesive content. Your type of writing should be expressed as personal\
+            \ opinion of Vadzim Belski - use very simple words, easy express information\
+            \ as personal view on things, make it read fun and engaging. No need to\
+            \ follow up section or make any conclusions, transition between sections\
+            \ should be very smooth. You should transition naturally from each section,\
+            \ build off of each section, and you should not repeat the same sentence\
+            \ structure. Do not include a conclusion, sum up or summary, no \"in conclusion\"\
+            , \"to conclude\" or variations. \n"
+        - edition_type: basic
+          id: 3cd98fe1-cd1f-4c32-9039-6c38a7f2a6e0
+          jinja2_text: ''
+          role: user
+          text: "You are writing a document called \"{{#1719836429476.title#}}\" .\
+            \ Write a section as markdown text based on the following information\
+            \ in <information> tags using human non formal language with python code\
+            \ examples, important concepts, use cases, best practices and possible\
+            \ future ideas, explain the reader all aspects of the information.  Ensure\
+            \ smooth transitions between sections to maintain a coherent flow. Make\
+            \ sure that each section transitions smoothly to the next. Use appropriate\
+            \ transitional phrases and logical connections to maintain a coherent\
+            \ flow throughout the piece, guiding the reader seamlessly from one idea\
+            \ to the next. Each section should be very connected to each other as\
+            \ single article: \nTake the full outline as a reference when generating\
+            \ section and subsection text.\n\n\nInclude mermaid diagrams to illustrate\
+            \ information in the section in visual way that will better describe how\
+            \ it works, architecture and details, in very details. You can use the\
+            \ following diagrams that better describe the situation or even you can\
+            \ present several views:\n- Flowchart\n- Sequence\n- Class\n- git Graph\n\
+            - ERP\n- User Journey\n- Gantt\n- Pie\n- Mindmap\n- Quadrant Chart\n-\
+            \ XY Chart\n- Requirement Diagram\n- Timeline Diagram\n- Architecture\
+            \ Diagram\n- C4 Diagram\n- State diagram\nPlease provide explanations\
+            \ of generated diagrams below. \n\nBelow is all mermaid diagram example:\n\
+            \n```mermaid\nsequenceDiagram\n    participant Alice\n    participant\
+            \ Bob\n    Alice->>John: Hello John, how are you?\n    loop Healthcheck\n\
+            \        John->>John: Fight against hypochondria\n    end\n    Note right\
+            \ of John: Rational thoughts <br/>prevail!\n    John-->>Alice: Great!\n\
+            \    John->>Bob: How about you?\n    Bob-->>John: Jolly good!\n```\n\n\
+            \nBelow is all sections in \"<all_sections>\" tags:\n<all_sections>\n\
+            {{#1719837976680.text#}}\n</all_sections>\n\n<information>\n{{#1719837709331.item#}}.\
+            \ \n</information>\n\nBelow is outline for your reference in \"<Full-outline-for-reference>\"\
+            \ tags:\n<Full-outline-for-reference>\n{{#1719837976680.text#}}\n</Full-outline-for-reference>"
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: LLM 4
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: false
+      extent: parent
+      height: 123
+      id: '1719837715461'
+      parentId: '1719837709331'
+      position:
+        x: 117
+        y: 82.84154352699113
+      positionAbsolute:
+        x: 2879
+        y: 432.84154352699113
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1001
+    - data:
+        code: "def main(arg1: str) -> dict:\n\n    import json\n    data = json.loads(arg1)\n\
+          \    \n    # Create an array of objects\n    result = [{'section': item[\"\
+          section\"], 'bullets': item[\"bullets\"]} for item in data]\n    \n    return\
+          \ {\n        'result': result\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: array[object]
+        selected: false
+        title: Code
+        type: code
+        variables:
+        - value_selector:
+          - '1719837976680'
+          - text
+          variable: arg1
+      height: 54
+      id: '1719837933588'
+      position:
+        x: 2154
+        y: 350
+      positionAbsolute:
+        x: 2154
+        y: 350
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-5-sonnet-20240620
+          provider: anthropic
+        prompt_template:
+        - edition_type: basic
+          id: f5682adb-07f2-43fa-b5a0-6762b369b22a
+          role: system
+          text: "You are to write a long article based on a provided title and requirements\
+            \ from customer. \n\nFollow these steps to complete the task:\n1. Use\
+            \ the article_title as the part of the title of the article, title should\
+            \ focus on strategic software development consultancy for such project.\n\
+            2. Organize the article based on the article_outline provided. Each section\
+            \ in the outline should correspond to a section in the article.\n3. Ensure\
+            \ that the article is well-developed, with each section containing detailed\
+            \ information, explanations, examples, and any other relevant content\
+            \ to fully cover the topic. Your writing should be expressed as personal\
+            \ opinion of Vadzim Belski - use very simple words, easy express information\
+            \ as personal view on things, make it read fun and engaging.\n4. Ensure\
+            \ smooth transitions between sections to maintain a coherent flow. Make\
+            \ sure that each section transitions smoothly to the next. Use appropriate\
+            \ transitional phrases and logical connections to maintain a coherent\
+            \ flow throughout the piece, guiding the reader seamlessly from one idea\
+            \ to the next. You should transition naturally from each section, build\
+            \ off of each section, and you should not repeat the same sentence structure.\
+            \ Do not include a conclusion, sum up or summary, no \"in conclusion\"\
+            , \"to conclude\" or variations. Do not include links or mention any company\
+            \ that are competitive with the brand. \n5. The output should be free\
+            \ from any XML tags. \n\n"
+        - id: 93a57200-ccab-42fe-99df-730c20399225
+          role: user
+          text: "<instruction>\nProvide only valid JSON array (do not follow JSON\
+            \ array with any text like closing tag </output>) with the following keys\
+            \ and values: \"section\" (the title of each section of the article),\
+            \ \"bullets\" (an outline for each section of the article). \n<example>\n\
+            <input>\n<article_title> The Impact of Climate Change on Coastal Cities\
+            \ </article_title>\n<article_outline> \n  1. Introduction\n  2. Rising\
+            \ Sea Levels\n  3. Increased Storm Frequency\n  4. Conclusion\n</article_outline>\n\
+            </input>\n<output>\n [\n    {\n      \"section\": \"Introduction\",\n\
+            \      \"bullets\": \"1. Overview of climate change effects on coastal\
+            \ cities 2. Importance of understanding these impacts\"\n    },\n    {\n\
+            \      \"section\": \"Rising Sea Levels\",\n      \"bullets\": \"1. Causes\
+            \ of rising sea levels 2. Effects on coastal infrastructure and communities3.\
+            \ Examples of affected cities\"\n    },\n   {\n      \"section\": \"Increased\
+            \ Storm Frequency\",\n      \"bullets\": \"1. Link between climate change\
+            \ and storm frequency 2. Impact of more frequent and severe storms on\
+            \ coastal areas 3. Case studies of recent storms\"\n    }, \n   {\n  \
+            \    \"section\": \"Conclusion\",\n      \"bullets\": \"1. Summary of\
+            \ key points 2. The urgency of addressing climate change 2. Call to action\
+            \ for policymakers and communities\"\n    }\n  ]\n</output>\n</example>\n\
+            </instruction>\n\n\n<input>\n<article_title> {{#1719836429476.title#}}</article_title>\n\
+            <article_outline> {{#1719836429476.outline#}} </article_outline>\n</input>\n\
+            <output>\n"
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: LLM - Generate Subtitles and Outlines
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: false
+      height: 123
+      id: '1719837976680'
+      position:
+        x: 1850
+        y: 350
+      positionAbsolute:
+        x: 1850
+        y: 350
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "\ndef main(articleSections: list):\n    data = articleSections\n  \
+          \  return {\n        \"result\": \"\\n\".join(data)\n    }\n"
+        code_language: python3
+        desc: 'Transform Array from Iteration to String. '
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: Code - Transform to string
+        type: code
+        variables:
+        - value_selector:
+          - '1733222418803'
+          - output
+          variable: articleSections
+      height: 98
+      id: '1719839156682'
+      position:
+        x: 3503
+        y: 608
+      positionAbsolute:
+        x: 3503
+        y: 608
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        selected: false
+        template: "---\ntitle: \"{{ title }}\"\ndate: {{ date }}\ndraft: false\nfeatured:\
+          \ true\nog_image: \"{{ image }}\"\ntags: [{{ tags }}]\ncover:\n  image:\
+          \ \"{{ image }}\"\n  responsiveImages: true\n  alt: \"{{ title }}\"\n  caption:\
+          \ \"{{ title }}\"\n  relative: false\n---\n\n{{ intro }}\n\n{{ body }}\n"
+        title: Template
+        type: template-transform
+        variables:
+        - value_selector:
+          - '1719837604056'
+          - text
+          variable: intro
+        - value_selector:
+          - '1719839156682'
+          - result
+          variable: body
+        - value_selector:
+          - '1719836429476'
+          - title
+          variable: title
+        - value_selector:
+          - '1726729891814'
+          - text
+          variable: tags
+        - value_selector:
+          - '1726730684531'
+          - date
+          variable: date
+        - value_selector:
+          - '1726730481614'
+          - body
+          variable: image
+      height: 54
+      id: '1719848037971'
+      position:
+        x: 3807
+        y: 780.5
+      positionAbsolute:
+        x: 3807
+        y: 780.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1719837709331start0
+      parentId: '1719837709331'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 2786
+        y: 418
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - type: text
+            value: '{
+
+              "title": "{{#1719836429476.title#}}",
+
+              "content": "{{#1729690945627.result#}}"
+
+              }'
+          type: json
+        desc: ''
+        headers: ''
+        method: post
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP Request - Save to file
+        type: http-request
+        url: http://local-api/hugo/save-article
+        variables: []
+      height: 135
+      id: '1726729633925'
+      position:
+        x: 4415
+        y: 892.5
+      positionAbsolute:
+        x: 4415
+        y: 892.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: generate tags
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-5-sonnet-20240620
+          provider: anthropic
+        prompt_template:
+        - edition_type: basic
+          id: 0293041d-9c4a-4846-b021-70a63fdf8dc3
+          role: system
+          text: 'You should generate 5 tags that describe article with title "{{#1719836429476.title#}}"
+            and outline "{{#1719836429476.outline#}}".
+
+            '
+        - id: c5f62e00-1f4a-4917-a913-061425d8efc3
+          role: user
+          text: 'You should respond as simple string without special chars.
+
+
+            Example of response: "blockchain","finance","bitcoin"'
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: LLM  - generate tags
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: false
+      height: 151
+      id: '1726729891814'
+      position:
+        x: 3503
+        y: 746
+      positionAbsolute:
+        x: 3503
+        y: 746
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - key: prompt
+            type: text
+            value: '{{#1719836429476.title#}}'
+          - key: outline
+            type: text
+            value: '{{#1719836429476.outline#}}'
+          type: x-www-form-urlencoded
+        desc: Generate Image
+        headers: ''
+        method: post
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        timeout:
+          connect: 300
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP Request - Image
+        type: http-request
+        url: http://local-api/image/generate-image
+        variables: []
+      height: 163
+      id: '1726730481614'
+      position:
+        x: 3503
+        y: 937
+      positionAbsolute:
+        x: 3503
+        y: 937
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "from datetime import datetime\n\ndef main() -> dict:\n\n    current_date\
+          \ = datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S +0000')\n\n    return\
+          \ {\n        \"date\": current_date,\n    }\n"
+        code_language: python3
+        desc: Return date
+        outputs:
+          date:
+            children: null
+            type: string
+        selected: false
+        title: Code - current date
+        type: code
+        variables: []
+      height: 82
+      id: '1726730684531'
+      position:
+        x: 3503
+        y: 1140
+      positionAbsolute:
+        x: 3503
+        y: 1140
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: "import urllib.parse\n\ndef main(result: list):\n    data = urllib.parse.quote(result)\n\
+          \    return {\n        \"result\": data\n    }"
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: URL Encode Text
+        type: code
+        variables:
+        - value_selector:
+          - '1719848037971'
+          - output
+          variable: result
+      height: 54
+      id: '1729690945627'
+      position:
+        x: 4111
+        y: 910.5
+      positionAbsolute:
+        x: 4111
+        y: 910.5
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: 9e2028ee-36b6-4ec7-947c-5bd7004b5d8d
+            value: 'yes'
+            varType: string
+            variable_selector:
+            - '1719836429476'
+            - make_diagrams
+          - comparison_operator: is
+            id: 57bdf819-c378-49aa-ac4d-66c898190b8c
+            value: 'yes'
+            varType: string
+            variable_selector:
+            - '1719836429476'
+            - make_codesample
+          id: 'true'
+          logical_operator: and
+        - case_id: 5e978fad-a022-4c0b-8b3e-0035a5a34968
+          conditions:
+          - comparison_operator: is
+            id: 2b7d0b8f-c7b4-4ff3-a5d5-3d7fd4d48d79
+            value: 'yes'
+            varType: string
+            variable_selector:
+            - '1719836429476'
+            - make_codesample
+          - comparison_operator: is
+            id: d1ed9fe3-939a-40c5-8ed4-2a859a1219cd
+            value: 'no'
+            varType: string
+            variable_selector:
+            - '1719836429476'
+            - make_diagrams
+          id: 5e978fad-a022-4c0b-8b3e-0035a5a34968
+          logical_operator: and
+        - case_id: 9c45b8bc-7f35-43e3-9017-d6612b1d3bb7
+          conditions:
+          - comparison_operator: is
+            id: c9692366-1be2-426a-9d8b-8fb33402afcd
+            value: 'yes'
+            varType: string
+            variable_selector:
+            - '1719836429476'
+            - make_diagrams
+          - comparison_operator: contains
+            id: e615a4a1-af47-4ccc-82f6-0bfe3dbdff02
+            value: 'no'
+            varType: string
+            variable_selector:
+            - '1719836429476'
+            - make_codesample
+          id: 9c45b8bc-7f35-43e3-9017-d6612b1d3bb7
+          logical_operator: and
+        desc: ''
+        selected: false
+        title: IF/ELSE
+        type: if-else
+      height: 300
+      id: '1733221729024'
+      position:
+        x: 2458
+        y: 350
+      positionAbsolute:
+        x: 2458
+        y: 350
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 225.84154352699113
+        is_parallel: false
+        iterator_selector:
+        - '1719837933588'
+        - result
+        output_selector:
+        - '1733221753794017332217537940'
+        - text
+        output_type: array[string]
+        parallel_nums: 10
+        selected: false
+        startNodeType: llm
+        start_node_id: 1733221753794start
+        title: Iteration - Write Body - No Diagram
+        type: iteration
+        width: 377
+      height: 226
+      id: '17332217537940'
+      position:
+        x: 2762
+        y: 616
+      positionAbsolute:
+        x: 2762
+        y: 616
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 377
+      zIndex: 1
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        isIterationStart: true
+        iteration_id: '17332217537940'
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-sonnet-20240229
+          provider: anthropic
+        prompt_template:
+        - edition_type: basic
+          id: 2344db64-3bb3-4fb8-ae50-5ac537a3dfc2
+          role: system
+          text: "You are an expert document writer. Your job is to write long form\
+            \ cohesive content. Your type of writing should be expressed as personal\
+            \ opinion of Vadzim Belski - use very simple words, easy express information\
+            \ as personal view on things, make it read fun and engaging. No need to\
+            \ follow up section or make any conclusions, transition between sections\
+            \ should be very smooth. You should transition naturally from each section,\
+            \ build off of each section, and you should not repeat the same sentence\
+            \ structure. Do not include a conclusion, sum up or summary, no \"in conclusion\"\
+            , \"to conclude\" or variations. \n"
+        - edition_type: basic
+          id: 3cd98fe1-cd1f-4c32-9039-6c38a7f2a6e0
+          jinja2_text: ''
+          role: user
+          text: "You are writing a document called \"{{#1719836429476.title#}}\" .\
+            \ Write a section as markdown text based on the following information\
+            \ in <information> tags using human non formal language with python code\
+            \ examples, important concepts, use cases, best practices and possible\
+            \ future ideas, explain the reader all aspects of the information.  Ensure\
+            \ smooth transitions between sections to maintain a coherent flow. Make\
+            \ sure that each section transitions smoothly to the next. Use appropriate\
+            \ transitional phrases and logical connections to maintain a coherent\
+            \ flow throughout the piece, guiding the reader seamlessly from one idea\
+            \ to the next. Each section should be very connected to each other as\
+            \ single article.\n\nTake the full outline as a reference when generating\
+            \ section and subsection text.\n\nBelow is all sections in \"<all_sections>\"\
+            \ tags:\n<all_sections>\n{{#1719837976680.text#}}\n</all_sections>\n\n\
+            <information>\n{{#17332217537940.item#}}. \n</information>\n\nBelow is\
+            \ outline for your reference in \"<Full-outline-for-reference>\" tags:\n\
+            <Full-outline-for-reference>\n{{#1719837976680.text#}}\n</Full-outline-for-reference>"
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: LLM 7
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: false
+      extent: parent
+      height: 123
+      id: '1733221753794017332217537940'
+      parentId: '17332217537940'
+      position:
+        x: 115.4357032023704
+        y: 82.84154352699113
+      positionAbsolute:
+        x: 2877.4357032023704
+        y: 698.8415435269911
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1001
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1733221753794start
+      parentId: '17332217537940'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 2786
+        y: 684
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 225.84154352699113
+        is_parallel: false
+        iterator_selector:
+        - '1719837933588'
+        - result
+        output_selector:
+        - '1733221777595017332217775950'
+        - text
+        output_type: array[string]
+        parallel_nums: 10
+        selected: false
+        startNodeType: llm
+        start_node_id: 1733221777595start
+        title: Iteration - Write Body - No Code
+        type: iteration
+        width: 377
+      height: 226
+      id: '17332217775950'
+      position:
+        x: 2762
+        y: 882
+      positionAbsolute:
+        x: 2762
+        y: 882
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 377
+      zIndex: 1
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        isInIteration: true
+        isIterationStart: true
+        iteration_id: '17332217775950'
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: claude-3-sonnet-20240229
+          provider: anthropic
+        prompt_template:
+        - edition_type: basic
+          id: 2344db64-3bb3-4fb8-ae50-5ac537a3dfc2
+          role: system
+          text: "You are an expert document writer. Your job is to write long form\
+            \ cohesive content. Your type of writing should be expressed as personal\
+            \ opinion of Vadzim Belski - use very simple words, easy express information\
+            \ as personal view on things, make it read fun and engaging. No need to\
+            \ follow up section or make any conclusions, transition between sections\
+            \ should be very smooth. You should transition naturally from each section,\
+            \ build off of each section, and you should not repeat the same sentence\
+            \ structure. Do not include a conclusion, sum up or summary, no \"in conclusion\"\
+            , \"to conclude\" or variations. \n"
+        - edition_type: basic
+          id: 3cd98fe1-cd1f-4c32-9039-6c38a7f2a6e0
+          jinja2_text: ''
+          role: user
+          text: "You are writing a document called \"{{#1719836429476.title#}}\" .\
+            \ Write a section as markdown text based on the following information\
+            \ in <information> tags using human non formal language, important concepts,\
+            \ use cases, best practices and possible future ideas, explain the reader\
+            \ all aspects of the information.  Ensure smooth transitions between sections\
+            \ to maintain a coherent flow. Make sure that each section transitions\
+            \ smoothly to the next. Use appropriate transitional phrases and logical\
+            \ connections to maintain a coherent flow throughout the piece, guiding\
+            \ the reader seamlessly from one idea to the next. Each section should\
+            \ be very connected to each other as single article: \nTake the full outline\
+            \ as a reference when generating section and subsection text.\n\nInclude\
+            \ mermaid diagrams to illustrate information in the section in visual\
+            \ way that will better describe how it works, architecture and details,\
+            \ in very details. You can use the following diagrams that better describe\
+            \ the situation or even you can present several views:\n- Flowchart\n\
+            - Sequence\n- Class\n- git Graph\n- ERP\n- User Journey\n- Gantt\n- Pie\n\
+            - Mindmap\n- Quadrant Chart\n- XY Chart\n- Requirement Diagram\n- Timeline\
+            \ Diagram\n- Architecture Diagram\n- C4 Diagram\n- State diagram\nPlease\
+            \ provide explanations of generated diagrams below. \n\nBelow is all mermaid\
+            \ diagram example:\n\n```mermaid\nsequenceDiagram\n    participant Alice\n\
+            \    participant Bob\n    Alice->>John: Hello John, how are you?\n   \
+            \ loop Healthcheck\n        John->>John: Fight against hypochondria\n\
+            \    end\n    Note right of John: Rational thoughts <br/>prevail!\n  \
+            \  John-->>Alice: Great!\n    John->>Bob: How about you?\n    Bob-->>John:\
+            \ Jolly good!\n```\n\nBelow is all sections in \"<all_sections>\" tags:\n\
+            <all_sections>\n{{#1719837976680.text#}}\n</all_sections>\n\n<information>\n\
+            {{#17332217775950.item#}}. \n</information>\n\nBelow is outline for your\
+            \ reference in \"<Full-outline-for-reference>\" tags:\n<Full-outline-for-reference>\n\
+            {{#1719837976680.text#}}\n</Full-outline-for-reference>"
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 1000
+        selected: false
+        title: LLM 8
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+          enabled: false
+      extent: parent
+      height: 123
+      id: '1733221777595017332217775950'
+      parentId: '17332217775950'
+      position:
+        x: 117
+        y: 82.84154352699113
+      positionAbsolute:
+        x: 2879
+        y: 964.8415435269911
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1001
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: 1733221777595start
+      parentId: '17332217775950'
+      position:
+        x: 24
+        y: 68
+      positionAbsolute:
+        x: 2786
+        y: 950
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        advanced_settings:
+          group_enabled: false
+          groups:
+          - groupId: 988b9665-5744-46f4-a64b-4d9eb93114ff
+            group_name: Group1
+            output_type: array[string]
+            variables:
+            - - '1719837709331'
+              - output
+            - - '17332217537940'
+              - output
+            - - '17332217775950'
+              - output
+        desc: ''
+        output_type: array[string]
+        selected: false
+        title: Variable Aggregator - For All cases
+        type: variable-aggregator
+        variables:
+        - - '1719837709331'
+          - output
+        - - '17332217537940'
+          - output
+        - - '17332217775950'
+          - output
+      height: 153
+      id: '1733222418803'
+      position:
+        x: 3199
+        y: 616
+      positionAbsolute:
+        x: 3199
+        y: 616
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: -23.98107154786726
+      y: -40.73396200124131
+      zoom: 0.7009710789979342
